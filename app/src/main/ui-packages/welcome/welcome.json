@@ -1,0 +1,88 @@
+{
+  "name": "welcome",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "36:30",
+    "version": "4276440524",
+    "component-id": "865f8ece72e189b111b169b5f9bfc1204420c25b"
+  },
+  "default": "Welcome",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "welcome text"
+      }
+    ],
+    "modes": {
+      "Welcome": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "welcome text"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "welcome text",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "$welcome text text content",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "32.0",
+            "letter-spacing": "2.72",
+            "line-height": "1.31884765625",
+            "typeface": "Jacques Francois"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "welcome text text content": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Welcome",
+      "size": {
+        "width": 337.0,
+        "height": 68.0
+      },
+      "parameters": {
+        "welcome text text content": "Welcome\n"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

@@ -1,0 +1,74 @@
+{
+  "name": "apples_1",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "36:25",
+    "version": "4276440524",
+    "component-id": "9b5ca27914f6020662979075bcae5bc326637c43"
+  },
+  "default": "apples 1",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "myapples 1"
+      }
+    ],
+    "modes": {
+      "apples 1": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "myapples 1"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "myapples 1",
+            "longpress-handler": "$on myapples 1 long pressed",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "image-content": "myapples_1.png",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "on myapples 1 long pressed": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "apples 1",
+      "size": {
+        "width": 196.0,
+        "height": 167.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

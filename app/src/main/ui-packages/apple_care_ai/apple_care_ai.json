@@ -1,0 +1,85 @@
+{
+  "name": "apple_care_ai",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "36:26",
+    "version": "4276440524",
+    "component-id": "a41f44e23aeb48b32a42086f1d9b5e18be6bb7c0"
+  },
+  "default": "AppleCare AI",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "applecare text"
+      }
+    ],
+    "modes": {
+      "AppleCare AI": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "applecare text"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "applecare text",
+            "tap-handler": "$on applecare text tapped",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "AppleCare AI",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "40.0",
+            "line-height": "1.31884765625",
+            "typeface": "Jacques Francois"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "on applecare text tapped": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "AppleCare AI",
+      "size": {
+        "width": 290.0,
+        "height": 90.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

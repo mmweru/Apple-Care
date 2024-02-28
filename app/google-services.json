@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "809085677793",
+    "project_id": "applecare-7db49",
+    "storage_bucket": "applecare-7db49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809085677793:android:13e7e4163144d9fe05c7a0",
+        "android_client_info": {
+          "package_name": "com.example.applecare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj9xFEc0dPwIN5zdos6bfNFIwTpS4Lyak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

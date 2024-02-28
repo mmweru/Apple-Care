@@ -1,0 +1,88 @@
+{
+  "name": "email",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "36:31",
+    "version": "4276440524",
+    "component-id": "36e9e944ca8ea33cdcbd0d487976018d0351a898"
+  },
+  "default": "Email",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "text",
+        "id": "email address"
+      }
+    ],
+    "modes": {
+      "Email": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "email address"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "email address",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "159.31034482758622",
+              "saturation": "0.87",
+              "value": "0.39215686274509803"
+            },
+            "text-content": "$email address text content",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "24.0",
+            "letter-spacing": "2.04",
+            "line-height": "1.31884765625",
+            "typeface": "Jacques Francois"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "email address text content": {
+      "data-type": "text",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Email",
+      "size": {
+        "width": 244.0,
+        "height": 44.0
+      },
+      "parameters": {
+        "email address text content": "Email "
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

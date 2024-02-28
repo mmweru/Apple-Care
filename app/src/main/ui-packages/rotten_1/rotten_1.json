@@ -1,0 +1,74 @@
+{
+  "name": "rotten_1",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "60:4",
+    "version": "4276440524",
+    "component-id": "cedf68ad2f87097b4d60b28af46abb34e84ff297"
+  },
+  "default": "rotten 1",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "diseasedapple"
+      }
+    ],
+    "modes": {
+      "rotten 1": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "diseasedapple"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "diseasedapple",
+            "tap-handler": "$on diseasedapple tapped",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "image-content": "diseasedapple.png",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "on diseasedapple tapped": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "rotten 1",
+      "size": {
+        "width": 300.0,
+        "height": 272.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

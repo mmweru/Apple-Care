@@ -1,0 +1,76 @@
+{
+  "name": "apples_2",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "36:29",
+    "version": "4276440524",
+    "component-id": "177bca990ed57b8a57f66f5cc106fc46ab3471b5"
+  },
+  "default": "apples 2",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "apples image"
+      }
+    ],
+    "modes": {
+      "apples 2": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "apples image"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "apples image",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "image-content": "$apples image image content",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "apples image image content": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "apples 2",
+      "size": {
+        "width": 96.0,
+        "height": 97.0
+      },
+      "parameters": {
+        "apples image image content": "apples_image.png"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

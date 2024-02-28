@@ -1,0 +1,76 @@
+{
+  "name": "fruits_2",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "JKnTmdOyTOIgXKFXD9kNjv",
+    "node": "36:24",
+    "version": "4276440524",
+    "component-id": "644a9ea9d9abd943f2bb3b274cd5a18057177e84"
+  },
+  "default": "fruits 2",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "image",
+        "id": "myfruits 2"
+      }
+    ],
+    "modes": {
+      "fruits 2": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "myfruits 2"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "myfruits 2",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "image-content": "$myfruits 2 image content",
+            "scale": "cover"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "myfruits 2 image content": {
+      "data-type": "image",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "fruits 2",
+      "size": {
+        "width": 433.0,
+        "height": 271.0
+      },
+      "parameters": {
+        "myfruits 2 image content": "myfruits_2.png"
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
