@@ -47,11 +47,11 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 val navController = rememberNavController()
 //                MyNavHost(navController = navController, starDest = "AnimatedSplashScreen")
-                NavHost(navController = navController, startDestination = "sign_in"){
-//                    composable("splash_screen"){
-//                        AnimatedSplashScreen(navController = navController)
-//
-//                    }
+                NavHost(navController = navController, startDestination = "splash_screen"){
+                    composable("splash_screen"){
+                        AnimatedSplashScreen(navController = navController)
+
+                    }
                     composable("sign_in"){
                         val viewModel = viewModel<SignInViewModel>()
                         val state by viewModel.state.collectAsStateWithLifecycle()
