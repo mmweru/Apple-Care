@@ -116,7 +116,7 @@ fun DashBoard(navController: NavHostController) {
                 ) {
                     HorizontalPager(state = pagerState) { page ->
                         when (page) {
-                            0 -> InteractiveNeonRectangleWithImage()
+                            0 -> InteractiveNeonRectangleWithImage(onClick = { navController.navigate("camera") })
                             1 -> InteractiveNeonRectangleWithImage1()
                             2 -> InteractiveNeonRectangleWithImage2()
                         }

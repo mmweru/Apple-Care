@@ -140,6 +140,7 @@ class MainActivity : ComponentActivity() {
                         DashBoard(navController = navController)
 
                     }
+
             }
         }
     }

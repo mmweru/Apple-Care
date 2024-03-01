@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id ("com.google.relay") version "0.3.00"
     id("com.google.gms.google-services")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -32,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -62,22 +63,42 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
 
 
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation ("androidx.compose.material:material-icons-extended:1.5.4")
+
+    implementation("androidx.camera:camera-camera2:1.3.1")
+    implementation("androidx.camera:camera-lifecycle:1.3.1")
+    implementation("androidx.camera:camera-view:1.3.1")
+    implementation("androidx.camera:camera-extensions:1.3.1")
+
     //Lottie
     implementation("com.airbnb.android:lottie-compose:6.0.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation ("io.insert-koin:koin-core:3.2.0")// or latest version
+    implementation ("io.insert-koin:koin-android:3.2.0")
+
+
+    implementation ("io.insert-koin:koin-androidx-compose:3.4.6")
+
+    ////KOIN KSP////
+    implementation ("io.insert-koin:koin-annotations:1.3.1")
+    implementation ("io.insert-koin:koin-ksp-compiler:1.3.1")
+    //ksp ("io.insert-koin:koin-ksp-compiler:1.3.1")
+    ksp("androidx.room:room-compiler:2.5.2")
+
     implementation ("androidx.compose.material:material:1.6.2")
     implementation("androidx.activity:activity-compose:1.7.2")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation ("com.google.accompanist:accompanist-permissions:0.33.2-alpha")
 //    implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material3:material3-window-size-class:1.1.2")
+    implementation("androidx.compose.material3:material3-window-size-class:1.2.0")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0-alpha04")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0")
+
 
     implementation("com.google.accompanist:accompanist-flowlayout:0.24.8-beta")
     implementation("io.coil-kt:coil:2.2.2")
@@ -97,5 +118,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation("androidx.navigation:navigation-compose:2.4.0")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 }
