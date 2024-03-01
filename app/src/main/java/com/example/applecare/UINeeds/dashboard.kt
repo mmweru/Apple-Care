@@ -60,13 +60,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.applecare.R
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalFoundationApi::class)
-@Preview
 @Composable
-fun DashBoard() {
+fun DashBoard(navController: NavHostController) {
     val pagerState = rememberPagerState(pageCount = { 3 })
     Box(modifier = Modifier.fillMaxSize()) {
         Image(

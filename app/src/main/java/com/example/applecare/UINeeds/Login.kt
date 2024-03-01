@@ -94,6 +94,7 @@ import com.google.relay.compose.ColumnScopeInstanceImpl.align
 @Composable
 fun SignInScreen(
     state: SignInState,
+    navController: NavHostController,
     onSignInClick: () -> Unit
     ){
     val context = LocalContext.current

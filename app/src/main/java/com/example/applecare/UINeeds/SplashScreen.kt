@@ -67,8 +67,8 @@ fun AnimatedSplashScreen(navController: NavHostController){
     LaunchedEffect(key1 = true){
         startAnimation = true
         delay(4500)
-//        navController.popBackStack()
-        navController.navigate("sign-in")
+        navController.popBackStack()
+        navController.navigate("sign_in")
     }
     SplashScreen(alpha = alphaAnim.value)
 }
@@ -154,13 +154,14 @@ fun LogoImage() {
     //val imageResource: Painter =  painterResource(id = R.drawable.apples_1_myapples_1)
     Box (
         modifier = Modifier
-            .fillMaxSize()
+            .fillMaxSize(),
+        Alignment.CenterStart
             //.background(color = Color(0xFF0D6446))
     ) {
         LottieAnimation(
             modifier = Modifier
-                .size(340.dp)
-                .offset(y = 133.dp),
+                .size(340.dp),
+//                .offset(y = 133.dp),
             composition = composition,
             alignment = Alignment.Center,
             progress = { progress }
@@ -179,8 +180,10 @@ fun LogoImage() {
 //            }
 //
 //        )
-        val myfont = FontFamily(Font(R.font.relay_jacques_francois_regular))
-        Text(text = "AppleCare AI", color = Color.White,fontFamily = myfont, fontSize = 40.sp, fontWeight = FontWeight(400), modifier = Modifier.offset(x=70.dp, y = 432.dp) .clickable { isPlaying = true }, textAlign = TextAlign.Start)
+        val myfont = FontFamily(
+            Font(R.font.irish_grover, FontWeight.Black)
+        )
+        Text(text = "AppleCare AI", color = Color.White,fontFamily = myfont, fontSize = 40.sp, fontWeight = FontWeight(400), modifier = Modifier.offset(x=70.dp, y = 84.dp) .clickable { isPlaying = true }, textAlign = TextAlign.Start)
 
     }
 
