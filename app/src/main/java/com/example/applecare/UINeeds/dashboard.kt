@@ -116,7 +116,7 @@ fun DashBoard(navController: NavHostController) {
                 ) {
                     HorizontalPager(state = pagerState) { page ->
                         when (page) {
-                            0 -> InteractiveNeonRectangleWithImage()
+                            0 -> InteractiveNeonRectangleWithImage(navController = navController)
                             1 -> InteractiveNeonRectangleWithImage1()
                             2 -> InteractiveNeonRectangleWithImage2()
                         }
@@ -188,12 +188,12 @@ fun DashBoard(navController: NavHostController) {
 //    }
 //}
 
-@Preview
 @Composable
 fun InteractiveNeonRectangleWithImage(
     modifier: Modifier = Modifier,
     imageResource: Int = R.drawable.myinage1, // Replace with your image resource
     onClick: () -> Unit = {},
+    navController: NavHostController,
     text: String = "Camera"
 ) {
     val strokeColors = listOf(Color.Yellow, Color.Green, Color.White)
@@ -203,7 +203,7 @@ fun InteractiveNeonRectangleWithImage(
     )
 
     Box(
-        modifier = modifier.clickable(onClick = { onClick(); isTapped = !isTapped })
+        modifier = modifier.clickable(onClick = { navController.navigate("camera") })
     ) {
         Canvas(modifier = Modifier
             .offset(y = 20.dp)

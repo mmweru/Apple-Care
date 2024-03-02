@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/AppleCare-Ai" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JetpackComposeCameraXShowcase" vcs="Git" />
   </component>
 </project>

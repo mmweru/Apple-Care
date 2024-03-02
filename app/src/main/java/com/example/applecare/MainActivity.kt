@@ -1,13 +1,26 @@
 package com.example.applecare
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.ImageCapture.OnImageCapturedCallback
+import androidx.camera.core.ImageCaptureException
+import androidx.camera.core.ImageProxy
+import androidx.camera.view.LifecycleCameraController
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -17,7 +30,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -28,6 +44,7 @@ import com.example.applecare.UINeeds.AnimatedSplashScreen
 import com.example.applecare.UINeeds.DashBoard
 import com.example.applecare.UINeeds.MyNavHost
 import com.example.applecare.UINeeds.SignInScreen
+import com.example.applecare.cameraui.Camera
 import com.example.applecare.presentation.profile.ProfileScreen
 import com.example.applecare.presentation.sign_in.GoogleAuthUiClient
 import com.example.applecare.presentation.sign_in.SignInViewModel
@@ -43,6 +60,7 @@ class MainActivity : ComponentActivity() {
             oneTapClient = Identity.getSignInClient(applicationContext)
         )
     }
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -140,11 +158,37 @@ class MainActivity : ComponentActivity() {
                         DashBoard(navController = navController)
 
                     }
+                    composable("camera"){
+                        if (!hasRequiredPermissions()){
+                            ActivityCompat.requestPermissions(
+                                this@MainActivity, CAMERAX_PERMISSIONS, 0
+                            )
+                        }
+                        Camera(navController = navController)
+
+                    }
 
             }
+
         }
     }
-} }
+}
+
+    private fun hasRequiredPermissions(): Boolean {
+        return CAMERAX_PERMISSIONS.all {
+            ContextCompat.checkSelfPermission(
+                applicationContext,
+                it
+            ) == PackageManager.PERMISSION_GRANTED
+        }
+    }
+    companion object {
+        private val CAMERAX_PERMISSIONS = arrayOf(
+            Manifest.permission.CAMERA
+        )
+    }
+
+}
 
 
 
