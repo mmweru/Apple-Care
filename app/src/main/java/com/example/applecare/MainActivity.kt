@@ -165,8 +165,11 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         Camera(navController = navController)
-
                     }
+//                    composable("history"){
+//                        History(navController = navController)
+//
+//                    }
 
             }
 

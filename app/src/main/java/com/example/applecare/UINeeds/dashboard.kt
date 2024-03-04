@@ -251,7 +251,6 @@ fun InteractiveNeonRectangleWithImage(
         )
     }
 }
-@Preview
 @Composable
 fun InteractiveNeonRectangleWithImage1(
     modifier: Modifier = Modifier,

@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.applecare"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -41,6 +41,7 @@ android {
     }
     buildFeatures {
         compose = true
+        mlModelBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
@@ -64,7 +65,12 @@ dependencies {
 
 
     implementation("androidx.core:core-ktx:1.9.0")
+//    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.0")
+//    implementation("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0")
+//    implementation("org.tensorflow:tensorflow-lite-gpu:2.9.0")
+//    implementation("org.tensorflow:tensorflow-lite-support:2.8.0")
     implementation ("androidx.compose.material:material-icons-extended:1.5.4")
+    implementation ("org.tensorflow:tensorflow-lite:2.15.0")
 
     implementation("androidx.camera:camera-camera2:1.3.1")
     implementation("androidx.camera:camera-core:1.3.1")
@@ -85,8 +91,11 @@ dependencies {
     ////KOIN KSP////
     implementation ("io.insert-koin:koin-annotations:1.3.1")
     implementation ("io.insert-koin:koin-ksp-compiler:1.3.1")
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.3")
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
     //ksp ("io.insert-koin:koin-ksp-compiler:1.3.1")
     ksp("androidx.room:room-compiler:2.5.2")
+    implementation("io.github.microutils:kotlin-logging:2.0.11")
 
     implementation ("androidx.compose.material:material:1.6.2")
     implementation("androidx.activity:activity-compose:1.7.2")
